@@ -2,12 +2,11 @@
 
 public class BitingMonster : IMonster
 {
-    public BitingMonster(int damage)
-    {
-    }
+    private readonly int damage;
 
-    public int Attack()
-    {
-        return 30;
-    }
+    public BitingMonster(int damage) =>
+        this.damage = damage;
+
+    public int Attack() =>
+        damage;
 }
