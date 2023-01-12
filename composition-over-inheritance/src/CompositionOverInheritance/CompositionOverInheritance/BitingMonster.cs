@@ -1,14 +1,13 @@
 ﻿namespace CompositionOverInheritance;
 
-public class BitingMonster
+public class BitingMonster : IMonster
 {
-    public BitingMonster(int i)
+    public BitingMonster(int damage)
     {
-        throw new NotImplementedException();
     }
 
     public int Attack()
     {
-        throw new NotImplementedException();
+        return 30;
     }
 }
