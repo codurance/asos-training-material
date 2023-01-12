@@ -1,9 +1,6 @@
 ﻿namespace CompositionOverInheritance;
 
-public class BitingMonster : IMonster
+public class BitingMonster : Monster
 {
-
-    public BitingMonster() { }
-
-    public int Attack() => 30;
+    public BitingMonster() : base(30, 0) { }
 }

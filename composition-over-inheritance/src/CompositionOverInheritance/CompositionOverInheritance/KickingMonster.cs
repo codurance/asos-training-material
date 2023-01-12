@@ -1,6 +1,6 @@
 ﻿namespace CompositionOverInheritance;
 
-public class KickingMonster : IMonster
+public class KickingMonster : Monster
 {
-    public int Attack() => 45;
+    public KickingMonster() : base(0, 45) { }
 }
