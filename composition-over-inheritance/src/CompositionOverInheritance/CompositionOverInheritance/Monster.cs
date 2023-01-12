@@ -1,15 +1,14 @@
-﻿namespace CompositionOverInheritance;
+﻿using CompositionOverInheritance.Tests;
 
-public abstract class Monster
+namespace CompositionOverInheritance;
+
+public class Monster
 {
-    private readonly int bitingDamage;
-    private readonly int kickingDamage;
+    private readonly IAttack[] attacks;
 
-    protected Monster(int bitingDamage, int kickingDamage)
-    {
-        this.bitingDamage = bitingDamage;
-        this.kickingDamage = kickingDamage;
-    }
+    public Monster(params IAttack[] attacks) =>
+        this.attacks = attacks;
 
-    public int Attack() => bitingDamage + kickingDamage;
+    public int Attack() =>
+        attacks.Aggregate(0, (acc, atk) => acc + atk.Attack());
 }
