@@ -15,11 +15,4 @@ public class AttackShould
         Monster biter = new KickingMonster();
         Assert.Equal(45, biter.Attack());
     }
-
-    [Fact(DisplayName = "do 75 damage for a kicking and biting monster")]
-    public void Test3()
-    {
-        Monster biter = new KickingAndBitingMonster();
-        Assert.Equal(75, biter.Attack());
-    }
 }

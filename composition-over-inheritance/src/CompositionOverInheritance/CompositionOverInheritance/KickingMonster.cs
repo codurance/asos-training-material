@@ -2,5 +2,5 @@
 
 public class KickingMonster : Monster
 {
-    public KickingMonster() : base(0, 45) { }
+    public KickingMonster() : base(45) { }
 }
