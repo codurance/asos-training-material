@@ -6,7 +6,7 @@ public class AttackShould
     public void Test1()
     {
         IAttack bite = new Bite();
-        Monster biter = new Monster(bite);
+        var biter = new Monster(bite);
         Assert.Equal(30, biter.Attack());
     }
 
@@ -14,7 +14,7 @@ public class AttackShould
     public void Test2()
     {
         IAttack kick = new Kick();
-        Monster kicker = new Monster(kick);
+        var kicker = new Monster(kick);
         Assert.Equal(45, kicker.Attack());
     }
 
@@ -23,7 +23,7 @@ public class AttackShould
     {
         IAttack bite = new Bite();
         IAttack kick = new Kick();
-        Monster kickerAndBiter = new Monster(bite, kick);
+        var kickerAndBiter = new Monster(bite, kick);
         Assert.Equal(75, kickerAndBiter.Attack());
     }
 }
