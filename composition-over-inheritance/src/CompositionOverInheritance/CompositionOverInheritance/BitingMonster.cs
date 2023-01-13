@@ -2,5 +2,5 @@
 
 public class BitingMonster : Monster
 {
-    public BitingMonster() : base(30) { }
+    public BitingMonster() : base(0, 30) { }
 }
